@@ -2,7 +2,9 @@ import requests
 
 
 def get_repo_names_by_id(id):
-    return list(map(lambda x: x["name"], requests.get("https://api.github.com/users/{}/repos".format(id)).json()))
+    response = requests.get("https://api.github.com/users/{}/repos".format(id)).json()
+    print(response)
+    return list(map(lambda x: x["name"], response))
 
 
 def get_commites(id, repoName):
