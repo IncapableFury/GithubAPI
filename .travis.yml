@@ -5,5 +5,5 @@ install:
   - pip install requests
 # command to run tests
 script:
-  - python start
-  - python -m unittest Testing
+  - python start.py
+  - python -m unittest Testing.py
