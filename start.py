@@ -7,16 +7,17 @@ def get_repo_names_by_id(id):
     return list(map(lambda x: x["name"], response))
 
 
-def get_commites(id, repoName):
+def get_commits(id, repoName):
     response = requests.get("https://api.github.com/repos/{}/{}/commits".format(id, repoName)).json()
-    # print(response)
+    # print(len(response))
     return len(response)
+
 
 
 if __name__ == "__main__":
     repoNames = get_repo_names_by_id("IncapableFury")
     for repoName in repoNames:
-        commits = get_commites("IncapableFury", repoName)
+        commits = get_commits("IncapableFury", repoName)
         print('Repo: {:20} Number of commits: {}'.format(repoName, commits))
 
     # ---------fancy but nonsensical one-liner warning---------
