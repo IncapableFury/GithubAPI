@@ -4,9 +4,6 @@ python:
 install:
   - pip install requests
 # command to run tests
-branches:
-  only:
-    - /.*/
 script:
   - python start.py
   - python -m unittest Testing.py
