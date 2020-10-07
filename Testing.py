@@ -9,7 +9,7 @@ class TestGithubAPI(unittest.TestCase):
 
     def testCommitGetter(self):
         assert get_commites("IncapableFury", "CS-546") == 30
-        assert get_commites("IncapableFury", "Triangle_Testing") == 10
+        assert get_commites("IncapableFury", "Triangle_Testing") == 13
 
 
 if __name__ == '__main__':
